@@ -22,8 +22,8 @@ connection.once('open',()=>{
 app.get('/',(req,res) => {
     res.send('This is server API');
 })
-app.use('/review', reviewRouter);
-app.use('/store', storeRouter);
+app.use('/reviews', reviewRouter);
+app.use('/stores', storeRouter);
 
 
 app.listen(port, ()=>{
