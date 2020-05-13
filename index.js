@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
 const reviewRouter = require('./routers/review.router')
+const storeRouter = require('./routers/store.router')
 const cors = require('cors');
 
 
@@ -22,6 +23,7 @@ app.get('/',(req,res) => {
     res.send('This is server API');
 })
 app.use('/review', reviewRouter);
+app.use('/store', storeRouter);
 
 
 app.listen(port, ()=>{
