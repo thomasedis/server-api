@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
 const reviewRouter = require('./routers/review.router')
 const storeRouter = require('./routers/store.router')
+const raovatRouter = require('./routers/raovat.router')
 const cors = require('cors');
 
 
@@ -24,6 +25,7 @@ app.get('/',(req,res) => {
 })
 app.use('/reviews', reviewRouter);
 app.use('/stores', storeRouter);
+app.use('/raovats', raovatRouter);
 
 
 app.listen(port, ()=>{
