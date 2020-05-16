@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const raovatSchema = new Schema({
-    image: { type: String, required: true },
+    image: { type: String, required: false },
     title: { type: String, required: true },
     price: { type: Number, required: true },
     auther: { type: String, required: true },
