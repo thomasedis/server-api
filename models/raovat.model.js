@@ -7,8 +7,8 @@ const raovatSchema = new Schema({
     title: { type: String, required: true },
     price: { type: Number, required: true },
     auther: { type: String, required: true },
-    place: { type: String, required: true },
-    category: { type: String, required: true }
+    place: { type: String, required: false },
+    category: { type: String, required: false }
 }, {
   timestamps: true,
 });

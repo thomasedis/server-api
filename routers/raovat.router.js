@@ -2,7 +2,7 @@ const router = require('express').Router();
 let raovatController = require('./../controllers/raovat.controller')
 router.route('/').get(raovatController.index);
 
-// router.route('/add').post(raovatController.add);
+router.route('/add').post(raovatController.add);
 
 // router.route('/:id').get(raovatController.findById);
 

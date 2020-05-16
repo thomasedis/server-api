@@ -5,24 +5,24 @@ module.exports.index = (req, res) => {
       .then(raovat => res.json(raovat))
       .catch(err => res.status(400).json('Error: ' + err));
 }
-// module.exports.add= (req, res) => {
-//     const image = req.body.image;
-//     const content = req.body.content;
-//     const subContent = req.body.subContent;
-//     const auther = req.body.auther;
-//     const createdAt = Date.parse(req.body.createdAt);
+module.exports.add= (req, res) => {
+    const image = req.body.image;
+    const title = req.body.title;
+    const auther = req.body.auther;
+    const price = req.body.price;
+    const createdAt = Date.parse(req.body.createdAt);
   
-//     const newReview = new Review({
-//       image,
-//       content,
-//       subContent,
-//       auther
-//     });
+    const newRaoVat = new Raovat({
+      image,
+      title,
+      auther,
+      price
+    });
   
-//     newReview.save()
-//     .then(() => res.json('Review added!'))
-//     .catch(err => res.status(400).json('Error: ' + err));
-//   }
+    newRaoVat.save()
+    .then(() => res.json('RaoVat added!'))
+    .catch(err => res.status(400).json('Error: ' + err));
+  }
 
 //   module.exports.findById = (req, res) => {
 //     Review.findById(req.params.id)
