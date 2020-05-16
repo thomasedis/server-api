@@ -6,7 +6,7 @@ router.route('/add').post(raovatController.add);
 
 // router.route('/:id').get(raovatController.findById);
 
-// router.route('/:id').delete(raovatController.deleteById);
+router.route('/:id').delete(raovatController.deleteById);
 
 // router.route('/update/:id').post(raovatController.updateById);
 

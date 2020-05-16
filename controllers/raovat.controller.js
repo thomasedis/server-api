@@ -29,11 +29,11 @@ module.exports.add= (req, res) => {
 //       .then(Review => res.json(Review))
 //       .catch(err => res.status(400).json('Error: ' + err));
 //   }
-//   module.exports.deleteById=(req, res) => {
-//     Review.findByIdAndDelete(req.params.id)
-//       .then(() => res.json('Review deleted.'))
-//       .catch(err => res.status(400).json('Error: ' + err));
-//   }
+  module.exports.deleteById=(req, res) => {
+    Raovat.findByIdAndDelete(req.params.id)
+      .then(() => res.json('Raovat deleted.'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  }
 //   module.exports.updateById= (req, res) => {
 //     Review.findById(req.params.id)
 //       .then(review => {
