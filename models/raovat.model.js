@@ -7,7 +7,7 @@ const raovatSchema = new Schema({
     title: { type: String, required: true },
     price: { type: Number, required: true },
     auther: { type: String, required: true },
-    place: { type: String, required: false },
+    place: { type: String, required: true },
     category: { type: String, required: false }
 }, {
   timestamps: true,
@@ -23,7 +23,7 @@ let temp = [
     "title": "It Boy (20 ans d'écart)",
     "price": 496,
     "auther": "Harland Randleson",
-    "place": "Botswana",
+    "place": "TP.HCM",
     "category": "Lover"
   },
   {
@@ -32,7 +32,7 @@ let temp = [
     "title": "Tony Rome",
     "price": 147,
     "auther": "Ambrose Maggiori",
-    "place": "Thailand",
+    "place": "TP.HCM",
     "category": "Family"
   },
   {
@@ -41,7 +41,7 @@ let temp = [
     "title": "Twentieth Century",
     "price": 481,
     "auther": "Clara Mandifield",
-    "place": "China",
+    "place": "TP.HCM",
     "category": "Life"
   },
   {
@@ -50,7 +50,7 @@ let temp = [
     "title": "Teddy Bear (10 timer til Paradis)",
     "price": 362,
     "auther": "Roxana Moral",
-    "place": "Ukraine",
+    "place": "Bình Định",
     "category": "Life"
   },
   {
@@ -59,7 +59,7 @@ let temp = [
     "title": "Charlie Chan in Panama",
     "price": 263,
     "auther": "Cristobal Camplin",
-    "place": "United States",
+    "place": "Đà Nẵng",
     "category": "Other"
   },
   {
@@ -68,7 +68,7 @@ let temp = [
     "title": "Austin Powers: International Man of Mystery",
     "price": 127,
     "auther": "Chere Cordie",
-    "place": "Mongolia",
+    "place": "Hà Nội",
     "category": "Family"
   },
   {
@@ -77,7 +77,7 @@ let temp = [
     "title": "Betrayed, The",
     "price": 476,
     "auther": "Liliane Murdy",
-    "place": "Afghanistan",
+    "place": "TP.HCM",
     "category": "Magazine"
   },
   {
@@ -86,7 +86,7 @@ let temp = [
     "title": "Marihuana",
     "price": 268,
     "auther": "Arvy Attarge",
-    "place": "Brazil",
+    "place": "TP.HCM",
     "category": "Lover"
   },
   {
@@ -95,7 +95,7 @@ let temp = [
     "title": "Vinci",
     "price": 491,
     "auther": "Mae Courvert",
-    "place": "Uganda",
+    "place": "Bình Định",
     "category": "Magazine"
   },
   {
@@ -104,16 +104,16 @@ let temp = [
     "title": "Terrorizers, The (Kong bu fen zi)",
     "price": 471,
     "auther": "Adriena O'Doherty",
-    "place": "Russia",
+    "place": "Đà Nẵng",
     "category": "Lover"
   }
 ]
-// Raovat.insertMany(temp, (err)=>{
-//     if(err) throw err
-//     else
-//     console.log("done")
-// })
-// Store.deleteMany({quantity: 1},err =>{
+Raovat.insertMany(temp, (err)=>{
+    if(err) throw err
+    else
+    console.log("done")
+})
+// Store.deleteMany({category: "other"},err =>{
 //     if(err) throw err
 //     else 
 //         console.log('Deleted')

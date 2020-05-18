@@ -10,13 +10,15 @@ module.exports.add= (req, res) => {
     const title = req.body.title;
     const auther = req.body.auther;
     const price = req.body.price;
+    const place = req.body.place;
     const createdAt = Date.parse(req.body.createdAt);
   
     const newRaoVat = new Raovat({
       image,
       title,
       auther,
-      price
+      price,
+      place
     });
   
     newRaoVat.save()
