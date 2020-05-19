@@ -108,12 +108,12 @@ let temp = [
     "category": "Lover"
   }
 ]
-Raovat.insertMany(temp, (err)=>{
-    if(err) throw err
-    else
-    console.log("done")
-})
-// Store.deleteMany({category: "other"},err =>{
+// Raovat.insertMany(temp, (err)=>{
+//     if(err) throw err
+//     else
+//     console.log("done")
+// })
+// Raovat.deleteMany({place: "Đà Nẵng"},err =>{
 //     if(err) throw err
 //     else 
 //         console.log('Deleted')
