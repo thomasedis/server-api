@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const reviewRouter = require('./routers/review.router')
 const storeRouter = require('./routers/store.router')
 const raovatRouter = require('./routers/raovat.router')
+const blogsRouter = require('./routers/blogs.router')
 const cors = require('cors');
 
 
@@ -26,6 +27,7 @@ app.get('/',(req,res) => {
 app.use('/reviews', reviewRouter);
 app.use('/stores', storeRouter);
 app.use('/raovats', raovatRouter);
+// app.use('/blogs', blogsRouter);
 
 
 app.listen(port, ()=>{
