@@ -27,7 +27,7 @@ app.get('/',(req,res) => {
 app.use('/reviews', reviewRouter);
 app.use('/stores', storeRouter);
 app.use('/raovats', raovatRouter);
-// app.use('/blogs', blogsRouter);
+app.use('/blogs', blogsRouter);
 
 
 app.listen(port, ()=>{
