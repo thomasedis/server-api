@@ -6,6 +6,7 @@ const reviewRouter = require('./routers/review.router')
 const storeRouter = require('./routers/store.router')
 const raovatRouter = require('./routers/raovat.router')
 const blogsRouter = require('./routers/blogs.router')
+const usersRouter = require('./routers/users.router')
 const cors = require('cors');
 
 
@@ -28,6 +29,7 @@ app.use('/reviews', reviewRouter);
 app.use('/stores', storeRouter);
 app.use('/raovats', raovatRouter);
 app.use('/blogs', blogsRouter);
+app.use('/users', usersRouter);
 
 
 app.listen(port, ()=>{

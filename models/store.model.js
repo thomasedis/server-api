@@ -11,6 +11,7 @@ const storeSchema = new Schema({
         priceNew: { type: Number, required: true },
         percentDiscount: { type: Number, required: true },
         rating: { type: Number, required: true },
+        category: { type: String, required: true },
         inventory: { type:Number, required: true }
     },
   quantity: { type: Number, required: true },
@@ -23,27 +24,30 @@ const storeSchema = new Schema({
 const Store = mongoose.model('Store', storeSchema);
 let temp = [
     {
+      
       "book": {
-        "image": "https://images-na.ssl-images-amazon.com/images/I/51XKJ7YHK3L._AC_SX184_.jpg",
-        "name": "Oregano - Fresh",
-        "auther": "Lauraine Santon",
-        "rating": 1,
-        "priceOld": 538100,
-        "priceNew": 183746,
-        "percentDiscount": 19,
+        "image": "http://demo.posthemes.com/pos_koparion/60-medium_default/rival-field-messenger.jpg",
+        "name": "Day the Universe Changed, The",
+        "auther": "Nikolaus Summersett",
+        "priceOld": 333,
+        "priceNew": 181,
+        "percentDiscount": 44,
+        "rating": 5,
+        "category": "Other",
         "inventory": 739
       },
       
       "quantity": 1    },
     {
       "book": {
-        "image": "https://images-na.ssl-images-amazon.com/images/I/51HDieTXIlL._AC_SX184_.jpg",
-        "name": "Apples - Spartan",
-        "auther": "Bunni Tiddy",
-        "rating": 2,
-        "priceOld": 201478,
-        "priceNew": 522748,
-        "percentDiscount": 58,
+        "image": "http://demo.posthemes.com/pos_koparion/65-medium_default/crown-summit-backpack.jpg",
+        "name": "Who Killed Bambi? (Qui a tué Bambi?)",
+        "auther": "Oliviero Dunkerly",
+        "priceOld": 163,
+        "priceNew": 118,
+        "percentDiscount": 43,
+        "rating": 4,
+        "category": "Magazine",
         "inventory": 128
       },
       
@@ -54,10 +58,11 @@ let temp = [
         "name": "Hinge W Undercut",
         "auther": "De witt Mouser",
         "rating": 4,
-        "priceOld": 419139,
-        "priceNew": 203237,
+        "priceOld": 155,
+        "priceNew": 125,
         "percentDiscount": 73,
-        "inventory": 363
+        "inventory": 363,
+        "category": "Magazine",
       },
       
       "quantity": 1    },
@@ -67,9 +72,10 @@ let temp = [
         "name": "Glaze - Apricot",
         "auther": "Tedi Dowley",
         "rating": 5,
-        "priceOld": 768045,
-        "priceNew": 141389,
+        "priceOld": 255,
+        "priceNew": 199,
         "percentDiscount": 72,
+        "category": "Biography",
         "inventory": 972
       },
       
@@ -80,9 +86,10 @@ let temp = [
         "name": "Muffin Mix - Oatmeal",
         "auther": "Lena Daniells",
         "rating": 5,
-        "priceOld": 398585,
-        "priceNew": 704967,
+        "priceOld": 885,
+        "priceNew": 566,
         "percentDiscount": 76,
+        "category": "Drama",
         "inventory": 970
       },
       
@@ -93,9 +100,10 @@ let temp = [
         "name": "Beans - Long, Chinese",
         "auther": "Kristen Slayny",
         "rating": 3,
-        "priceOld": 309362,
-        "priceNew": 781843,
+        "priceOld": 199,
+        "priceNew": 159,
         "percentDiscount": 26,
+        "category": "Lover",
         "inventory": 806
       },
       
@@ -106,9 +114,10 @@ let temp = [
         "name": "Appetiser - Bought",
         "auther": "Con Lynock",
         "rating": 1,
-        "priceOld": 737350,
-        "priceNew": 970724,
+        "priceOld": 666,
+        "priceNew": 646,
         "percentDiscount": 17,
+        "category": "Family",
         "inventory": 177
       },
       
@@ -119,9 +128,10 @@ let temp = [
         "name": "Pork - Kidney",
         "auther": "Myriam Ondrak",
         "rating": 1,
-        "priceOld": 196831,
-        "priceNew": 694996,
+        "priceOld": 299,
+        "priceNew": 199,
         "percentDiscount": 62,
+        "category": "ForKid",
         "inventory": 28
       },
       
@@ -132,9 +142,10 @@ let temp = [
         "name": "Ice Cream - Strawberry",
         "auther": "Carlynn Pullan",
         "rating": 2,
-        "priceOld": 630738,
-        "priceNew": 580192,
+        "priceOld": 266,
+        "priceNew": 240,
         "percentDiscount": 38,
+        "category": "Lover",
         "inventory": 609
       },
       
@@ -145,9 +156,10 @@ let temp = [
         "name": "Veal - Kidney",
         "auther": "Tomas Yurygyn",
         "rating": 3,
-        "priceOld": 748665,
-        "priceNew": 521950,
+        "priceOld": 300,
+        "priceNew": 199,
         "percentDiscount": 79,
+        "category": "Drama",
         "inventory": 807
       },
       
@@ -158,9 +170,10 @@ let temp = [
         "name": "Chocolate - Sugar Free Semi Choc",
         "auther": "Othelia Vonderdell",
         "rating": 5,
-        "priceOld": 704145,
-        "priceNew": 685626,
+        "priceOld": 399,
+        "priceNew": 200,
         "percentDiscount": 25,
+        "category": "Biography",
         "inventory": 749
       },
       
@@ -171,9 +184,10 @@ let temp = [
         "name": "Oil - Peanut",
         "auther": "Mahalia Hartil",
         "rating": 2,
-        "priceOld": 161041,
-        "priceNew": 684309,
+        "priceOld": 333,
+        "priceNew": 167,
         "percentDiscount": 65,
+        "category": "Drama",
         "inventory": 897
       },
       
@@ -184,9 +198,10 @@ let temp = [
         "name": "Veal - Knuckle",
         "auther": "Leslie Dury",
         "rating": 3,
-        "priceOld": 353971,
-        "priceNew": 612471,
+        "priceOld": 222,
+        "priceNew": 199,
         "percentDiscount": 50,
+        "category": "Family",
         "inventory": 339
       },
       
@@ -197,9 +212,10 @@ let temp = [
         "name": "Crab - Claws, Snow 16 - 24",
         "auther": "Eustace Broader",
         "rating": 3,
-        "priceOld": 699691,
-        "priceNew": 129607,
+        "priceOld": 999,
+        "priceNew": 899,
         "percentDiscount": 22,
+        "category": "Family",
         "inventory": 202
       },
       
@@ -210,9 +226,10 @@ let temp = [
         "name": "Cakes Assorted",
         "auther": "Thorpe Climar",
         "rating": 3,
-        "priceOld": 846956,
-        "priceNew": 536839,
+        "priceOld": 199,
+        "priceNew": 150,
         "percentDiscount": 30,
+        "category": "Lover",
         "inventory": 61
       },
       
@@ -223,9 +240,10 @@ let temp = [
         "name": "Gooseberry",
         "auther": "Percival Odell",
         "rating": 3,
-        "priceOld": 290064,
-        "priceNew": 265130,
+        "priceOld": 99,
+        "priceNew": 79,
         "percentDiscount": 76,
+        "category": "ForKid",
         "inventory": 56
       },
       
@@ -236,9 +254,10 @@ let temp = [
         "name": "Maintenance Removal Charge",
         "auther": "Ber Gooding",
         "rating": 3,
-        "priceOld": 447628,
-        "priceNew": 876948,
+        "priceOld": 399,
+        "priceNew": 360,
         "percentDiscount": 46,
+        "category": "Biography",
         "inventory": 415
       },
       
@@ -249,9 +268,10 @@ let temp = [
         "name": "Syrup - Monin - Granny Smith",
         "auther": "Zaneta Galego",
         "rating": 4,
-        "priceOld": 169580,
-        "priceNew": 120932,
+        "priceOld": 299,
+        "priceNew": 269,
         "percentDiscount": 68,
+        "category": "Drama",
         "inventory": 230
       },
       
@@ -262,9 +282,10 @@ let temp = [
         "name": "Beer - Creemore",
         "auther": "Slade Laurence",
         "rating": 1,
-        "priceOld": 476867,
-        "priceNew": 288131,
+        "priceOld": 399,
+        "priceNew": 360,
         "percentDiscount": 52,
+        "category": "Biography",
         "inventory": 238
       },
       
@@ -275,9 +296,10 @@ let temp = [
         "name": "Stock - Veal, Brown",
         "auther": "Ritchie Oxnam",
         "rating": 3,
-        "priceOld": 202421,
-        "priceNew": 354298,
+        "priceOld": 299,
+        "priceNew": 250,
         "percentDiscount": 64,
+        "category": "Drama",
         "inventory": 362
       },
       
